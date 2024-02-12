@@ -1,0 +1,105 @@
+/* About.css */
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  padding-top: 60px; /* Give some space for the fixed navigation */
+  font-family: "Arial", sans-serif; /* Default font for the page */
+}
+
+.navigation {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: transparent;
+  padding: 10px 0;
+  z-index: 10;
+}
+
+.nav-item {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-item:active,
+.nav-item:focus {
+  color: gray;
+}
+
+.about-main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px; /* Or your preferred max width */
+  gap: 50px; /* Adjust the space between image/text container and content */
+  margin: 0 auto;
+}
+
+.about-image-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.about-image {
+  width: 200px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px; /* Space between image and header */
+  margin-left: 50px;
+}
+
+.about-title {
+  font-family: "Sacramento", cursive; /* Apply Sacramento font */
+  font-size: 3em;
+  margin: 0;
+}
+.about-subheader {
+  font-size: 1em;
+  margin: 0;
+}
+
+.about-content {
+  flex: 5; /* Allows this section to grow and take up remaining space */
+  padding-top: 20px; /* Aligns top of content with image */
+}
+
+.about-text {
+  text-align: left; /* Aligns text to the left */
+  max-width: 640px; /* Max width for content area */
+  font-size: 1em;
+}
+
+.about-section-title {
+  font-size: 1.5em;
+  margin-top: 20px; /* Add space above section title */
+  margin-bottom: 10px; /* Add space below section title */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+  .about-main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-image-wrapper,
+  .about-content {
+    width: 100%; /* Full width on smaller screens */
+    max-width: none;
+  }
+
+  .about-text {
+    text-align: center; /* Center text on smaller screens */
+  }
+}

@@ -1,0 +1,48 @@
+/* Contact.css */
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the container takes up at least the full height of the viewport */
+  justify-content: space-between; /* Space out the main content and the footer */
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align links to the left */
+  padding-left: 40px; /* Adjust as necessary */
+  margin-top: 20px; /* Adjust as necessary */
+}
+
+.contact-link {
+  margin: 10px 0; /* Adjust spacing as needed */
+  color: #000; /* Adjust color as needed */
+  text-decoration: none; /* Removes underline from links */
+}
+
+.contact-link:hover {
+  text-decoration: underline; /* Adds underline on hover for visual feedback */
+}
+
+.contact-footer {
+  text-align: center; /* Centers the footer text */
+  padding: 20px 0; /* Add padding to the top and bottom */
+}
+
+/* If you have a navigation bar that is fixed, you'll need to adjust the top padding of the container */
+.contact-container {
+  padding-top: 70px; /* Height of the navigation bar, adjust accordingly */
+}
+
+/* Add media query for mobile responsiveness if needed */
+@media (max-width: 768px) {
+  .contact-links {
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .contact-footer {
+    text-align: center;
+  }
+}

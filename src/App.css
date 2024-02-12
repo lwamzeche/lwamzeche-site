@@ -1,0 +1,15 @@
+/* App.css */
+
+.navigation {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white; /* Or any color that fits your design */
+  z-index: 1000; /* A high z-index ensures that the navigation stays on top */
+  /* Other styles... */
+}
+
+.main-content {
+  padding-top: 70px; /* Adjust this value to the height of your navigation bar */
+  /* Other styles... */
+}
