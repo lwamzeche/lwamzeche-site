@@ -6,15 +6,16 @@ import Roomie from "./images/LOGO.png";
 import MathPark from "./images/Math.png";
 import TicketEase from "./images/TicketEase.png";
 import TentuPlay from "./images/TentuPlay.png";
+import PianoRing from "./images/PianoRing.png";
 
 const projects = [
   {
     id: 1,
-    title: "Steam Dex",
+    title: "PianoRing",
     description:
-      "A website that analyzes various indie games from Steam, providing details such as price, budget, revenue, review count, and tags. It enables users to search for games by name, price, revenue, and tags.",
-    imageUrl: steamDexImage,
-    projectUrl: "https://steam-dex.com/",
+      "A piano learning device that combines haptic feedback with key guidance projection to facilitate independent learning. It features gloves with vibratory motors and LED indicators that synchronize with corresponding piano keys, offering real-time tactile and visual guidance. Designed to enhance muscle memory and finger coordination.",
+    imageUrl: PianoRing,
+    projectUrl: "https://youtu.be/HajAyAW5QAY?si=LhELFyv5BmgTrqcb",
   },
 
   {
@@ -26,7 +27,14 @@ const projects = [
     projectUrl:
       "https://github.com/lwamzeche/Roommate_Matching?tab=readme-ov-file",
   },
-
+  {
+    id: 3,
+    title: "Steam Dex",
+    description:
+      "A website that analyzes various indie games from Steam, providing details such as price, budget, revenue, review count, and tags. It enables users to search for games by name, price, revenue, and tags.",
+    imageUrl: steamDexImage,
+    projectUrl: "https://steam-dex.com/",
+  },
   {
     id: 3,
     title: "Math Park",
