@@ -58,7 +58,7 @@ function About() {
       <div className="about-links">
         {/* Links for CV and contact */}
         <a
-          href="https://docs.google.com/document/d/1yuzDxsTSx7oKnPSgsiyjB5aomQtHxGeM3qWopaALAYw/edit?usp=sharing"
+          href="https://drive.google.com/file/d/18KPimD9wZ1QCPlOfkYX5vV38qcx0e9Yu/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >
