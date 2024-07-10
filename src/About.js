@@ -67,7 +67,7 @@ function About() {
         <a href="mailto:lwamzeche@kaist.ac.kr">lwamzeche@kaist.ac.kr</a>
         <a href="https://hci.social/@lwam">Mastodon</a>
         <a href="https://github.com/lwamzeche">GitHub</a>
-        <a href="https://x.com/lwam_zeche">X(Twitter) </a>
+        <a href="https://x.com/lwam_zeche">X (Twitter) </a>
       </div>
     </div>
   );
