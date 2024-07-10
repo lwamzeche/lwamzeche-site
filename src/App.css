@@ -1,15 +1,49 @@
-/* App.css */
-
 .navigation {
-  position: fixed;
-  top: 0;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
   width: 100%;
-  background: white; /* Or any color that fits your design */
-  z-index: 1000; /* A high z-index ensures that the navigation stays on top */
-  /* Other styles... */
+  padding: 50px 40px; /* Adjusted for better spacing */
+
+  background-color: transparent; /* Making it blend into the page */
+  box-shadow: none; /* Removing any shadow for a flatter design */
+  /* position: fixed; */
+  top: 0;
+  /* z-index: 1000; */
 }
 
-.main-content {
-  padding-top: 70px; /* Adjust this value to the height of your navigation bar */
-  /* Other styles... */
+.nav-logo {
+  font-size: 44px; /* Consistent prominent size for the name */
+  font-weight: bold;
+  color: black; /* Ensuring it matches the main content's text color */
+  text-decoration: none;
+  margin-right: 0px;
+  font-family: "Sacramento", cursive;
+}
+
+.nav-links {
+  display: flex;
+  /* gap: 0px; Adjusted gap for a more spaced-out look */
+}
+
+.nav-item {
+  color: black;
+  text-decoration: none;
+  font-size: 18px;
+  padding-right: 80px;
+  transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+  color: darkgray; /* Subtle hover effect */
+}
+
+/* Responsive Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .navigation {
+    padding: 10px 20px; /* Smaller padding on smaller screens */
+  }
+  .nav-links {
+    display: none; /* Optionally hide navigation links on smaller screens */
+  }
 }

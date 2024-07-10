@@ -7,6 +7,7 @@ import MathPark from "./images/Math.png";
 import TicketEase from "./images/TicketEase.png";
 import TentuPlay from "./images/TentuPlay.png";
 import PianoRing from "./images/PianoRing.png";
+import EMS from "./images/EMS.jpeg";
 
 const projects = [
   {
@@ -27,6 +28,16 @@ const projects = [
     projectUrl:
       "https://github.com/lwamzeche/Roommate_Matching?tab=readme-ov-file",
   },
+
+  {
+    id: 1,
+    title: "EMS for touchscreens in VR",
+    description:
+      "In this individual reaserch I am working on replication a work that has been done on providing haptics to walls & heavy objects in virtual reality by means of electrical muscle stimulation” then Working on utilizing EMS to provide screen haptic feedback to improve the usability of a virtual touchscreen in VR.",
+    imageUrl: EMS,
+    // projectUrl: "https://youtu.be/HajAyAW5QAY?si=LhELFyv5BmgTrqcb",
+  },
+
   {
     id: 3,
     title: "Steam Dex",
@@ -61,13 +72,12 @@ const projects = [
     imageUrl: TentuPlay,
     projectUrl: "https://docs.tentuplay.io/js/en/latest/",
   },
-
-  // ... other projects ...
 ];
 
 function Projects() {
   return (
     <div className="projects-container">
+      {/* <h1 className="projects-title">Projects</h1> */}
       {projects.map((project) => (
         // Wrap the contents of the project card in an anchor tag
         <a
