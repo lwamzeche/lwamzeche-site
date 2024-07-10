@@ -1,8 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Link,
+  Navigate,
+} from "react-router-dom";
 import About from "./About";
 import Projects from "./Projects";
-// import Contact from "./Contact";
 import "./App.css";
 
 function App() {
@@ -12,10 +17,9 @@ function App() {
         <nav className="navigation">
           <Link to="/" className="nav-logo">
             Lwam Zeche
-          </Link>{" "}
-          {/* Your name as part of the navigation */}
+          </Link>
           <div className="nav-links">
-            <Link to="/" className="nav-item">
+            <Link to="/about" className="nav-item">
               About me
             </Link>
             <Link to="/projects" className="nav-item">
@@ -25,9 +29,10 @@ function App() {
         </nav>
 
         <Routes>
-          <Route path="/" element={<About />} />
+          <Route path="/" element={<Navigate to="/about" replace />} />
+          <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
-          {/* <Route path="/contact" element={<Contact />} /> */}
+          <Route path="*" element={<Navigate to="/about" replace />} />
         </Routes>
       </div>
     </Router>
