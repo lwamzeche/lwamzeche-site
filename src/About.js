@@ -64,10 +64,10 @@ function About() {
         >
           Get a copy of my CV
         </a>
-        <a href="mailto:lwamzeche@kaist.ac.kr">lwamzeche@kaist.ac.kr</a>
-        <a href="https://hci.social/@lwam">Mastodon</a>
+        <a href="mailto:lwamzeche@kaist.ac.kr">Email: lwamzeche@kaist.ac.kr</a>
         <a href="https://github.com/lwamzeche">GitHub</a>
         <a href="https://x.com/lwam_zeche">X (Twitter) </a>
+        <a href="https://hci.social/@lwam">Mastodon</a>
       </div>
     </div>
   );

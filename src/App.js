@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   BrowserRouter as Router,
   Route,
@@ -11,6 +11,12 @@ import Projects from "./Projects";
 import "./App.css";
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <Router>
       <div className="App">
@@ -18,11 +24,14 @@ function App() {
           <Link to="/" className="nav-logo">
             Lwam Zeche
           </Link>
-          <div className="nav-links">
-            <Link to="/about" className="nav-item">
+          <button className="menu-toggle" onClick={toggleMenu}>
+            ☰
+          </button>
+          <div className={`nav-links ${menuOpen ? "open" : ""}`}>
+            <Link to="/about" className="nav-item" onClick={toggleMenu}>
               About me
             </Link>
-            <Link to="/projects" className="nav-item">
+            <Link to="/projects" className="nav-item" onClick={toggleMenu}>
               Projects
             </Link>
           </div>

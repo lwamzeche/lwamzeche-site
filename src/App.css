@@ -1,29 +1,25 @@
 .navigation {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
+  align-items: center;
   width: 100%;
-  padding: 50px 40px; /* Adjusted for better spacing */
-
-  background-color: transparent; /* Making it blend into the page */
-  box-shadow: none; /* Removing any shadow for a flatter design */
-  /* position: fixed; */
+  padding: 20px 40px; /* Adjusted for better spacing */
+  background-color: transparent;
+  box-shadow: none;
   top: 0;
-  /* z-index: 1000; */
 }
 
 .nav-logo {
-  font-size: 44px; /* Consistent prominent size for the name */
+  font-size: 44px;
   font-weight: bold;
-  color: black; /* Ensuring it matches the main content's text color */
+  color: black;
   text-decoration: none;
-  margin-right: 0px;
+  /* margin-right: 0px; */
   font-family: "Sacramento", cursive;
 }
 
 .nav-links {
   display: flex;
-  /* gap: 0px; Adjusted gap for a more spaced-out look */
 }
 
 .nav-item {
@@ -35,15 +31,49 @@
 }
 
 .nav-item:hover {
-  color: darkgray; /* Subtle hover effect */
+  color: darkgray;
+}
+
+.menu-toggle {
+  display: none; /* Initially hidden */
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding-right: 80px;
+  padding-bottom: 80px;
+  margin-right: 0px;
+  /* position: fixed; */
 }
 
 /* Responsive Adjustments for smaller screens */
 @media (max-width: 768px) {
   .navigation {
     padding: 10px 20px; /* Smaller padding on smaller screens */
+    flex-direction: column;
+    align-items: flex-start;
   }
   .nav-links {
-    display: none; /* Optionally hide navigation links on smaller screens */
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 120px;
+    left: 40%;
+    /* right: 20%; */
+    width: 100%;
+    text-align: center;
+    border-radius: 8px;
+    z-index: 10;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+  .nav-item {
+    padding: 10px 0;
+    width: 100%;
+  }
+  .menu-toggle {
+    display: block; /* Show menu toggle button on smaller screens */
+    align-self: flex-end;
   }
 }
