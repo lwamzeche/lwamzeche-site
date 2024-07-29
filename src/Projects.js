@@ -7,6 +7,7 @@ import MathPark from "./images/Math.png";
 import TentuPlay from "./images/TentuPlay.png";
 import PianoRing from "./images/PianoRing.png";
 import EMS from "./images/EMS.jpeg";
+import CoffeeBuddy from "./images/CoffeeBuddy.png";
 
 const projects = [
   {
@@ -35,6 +36,16 @@ const projects = [
       "In this individual reaserch I am working on replication a work that has been done on providing haptics to walls & heavy objects in virtual reality by means of electrical muscle stimulation” then Working on utilizing EMS to provide screen haptic feedback to improve the usability of a virtual touchscreen in VR.",
     imageUrl: EMS,
     // projectUrl: "https://youtu.be/HajAyAW5QAY?si=LhELFyv5BmgTrqcb",
+  },
+
+  {
+    id: 4,
+    title: "CoffeeBuddy",
+    description:
+      "I have designed a mobile app for tracking daily caffeine levels for individuals who depend on coffee to get energy throughout the day. The app calculates the amount of caffeine users can limit themselves to based on their weight, and this limit gets updated dynamically with user input and their reported feelings after consuming that amount during the day.",
+    imageUrl: CoffeeBuddy,
+    projectUrl:
+      "https://www.figma.com/proto/mQYCu43StvpWWiq25stbrn/Intro-to-HCI-Project?page-id=575%3A1174&node-id=1113-2561&viewport=101%2C115%2C0.04&t=eVlmdJYjOotpU24r-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1113%3A2561",
   },
 
   {

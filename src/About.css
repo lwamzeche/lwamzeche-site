@@ -5,8 +5,7 @@
   align-items: flex-start; /* Aligns everything to the left */
   padding-top: 0%; /* Space for fixed navigation */
   padding-left: 50px; /*Aligns content with the logo */
-  width: 100%;
-  max-width: 99%; /*Restricts max width for better text alignment*/
+  max-width: 98%; /*Restricts max width for better text alignment*/
   margin-left: auto;
   margin-right: auto;
 }
@@ -15,7 +14,7 @@
 .about-main {
   display: flex;
   align-items: flex-start; /* Aligns items at the start of the flex container */
-  gap: 20%; /* Space between image and text */
+  gap: 15%; /* Space between image and text */
 }
 
 /* Image and Text Styling */
@@ -28,8 +27,8 @@
   width: 400px;
   height: 400px; /* Adjusts to your preference */
   object-fit: cover;
-  margin-bottom: 10px; /* Space below the image */
-  padding-right: 50px;
+  margin-bottom: 20px; /* Space below the image */
+  padding-right: 10px;
 }
 
 /* Text Content Styling */
@@ -62,6 +61,30 @@
   text-decoration: underline; /* Underline on hover */
 }
 
+.link-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 35px; /* Increase space between rows */
+}
+
+.link-row a {
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0 15px; /* Increase space between links in the same row */
+  white-space: nowrap; /* Prevent links from wrapping */
+}
+
+.link-row a:hover {
+  text-decoration: underline;
+}
+
+.link-row:last-child {
+  margin-left: -30px; /* Adjust this value as needed to align with the first row */
+}
+
 /* Adding spacing between paragraphs */
 p {
   margin-bottom: 26px; /* Adjust the value as needed */
@@ -92,7 +115,7 @@ p a:hover {
   }
 
   .about-image {
-    width: 100%; /* Full width images on small screens */
+    /* width: 100%; Full width images on small screens */
     height: auto; /* Adjusts height automatically */
   }
 }

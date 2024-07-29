@@ -6,17 +6,18 @@
   align-items: center;
   padding: 0px 20px 20px; /* Increased top padding, adjust as needed */
   gap: 40px; /* Space between project entries */
+  width: 100%;
 }
 
 .project {
   display: flex; /* Use flex instead of grid for better control */
   align-items: start; /* Align items to the top */
   gap: 20px; /* Space between image and details */
-  max-width: 1200px; /* Max width for the project, adjust as needed */
-  width: 100%; /* Make the project width responsive */
+  max-width: 85%; /* Max width for the project, adjust as needed */
+  /* width: 100%; Make the project width responsive */
   padding: 20px; /* Padding inside each project card */
-  border: 1px solid #eaeaea; /* Light border for the card */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  /* border: 1px solid #eaeaea; Light border for the card */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-image {
