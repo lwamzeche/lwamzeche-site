@@ -4,81 +4,78 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0px 20px 20px; /* Increased top padding, adjust as needed */
-  gap: 40px; /* Space between project entries */
+  padding: 0px 20px 20px;
+  gap: 40px;
   width: 100%;
 }
 
 .project {
-  display: flex; /* Use flex instead of grid for better control */
-  align-items: start; /* Align items to the top */
-  gap: 20px; /* Space between image and details */
-  max-width: 85%; /* Max width for the project, adjust as needed */
-  /* width: 100%; Make the project width responsive */
-  padding: 20px; /* Padding inside each project card */
-  /* border: 1px solid #eaeaea; Light border for the card */
+  display: flex;
+  align-items: start;
+  gap: 20px;
+  max-width: 85%;
+  padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .project-image {
-  width: 300px; /* Fixed width for all images */
-  height: 200px; /* Fixed height for all images */
-  object-fit: cover; /* Cover the area without stretching */
-  flex-shrink: 0; /* Prevent the image from shrinking */
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
 .project-details {
-  flex-grow: 1; /* Allow the details to grow and fill the remaining space */
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Distribute space between title and description */
-  min-width: 0; /* Fix for text overflow in flex children */
+  justify-content: space-between;
+  min-width: 0;
 }
 
 .project-title {
   font-size: 1.5em;
   margin: 0 0 10px 0;
-  white-space: nowrap; /* No wrapping */
-  overflow: hidden; /* Hide overflow */
-  text-overflow: ellipsis; /* Add ellipsis to overflow text */
 }
 
 .project-description {
   font-size: 1.2em;
   margin: 0;
-  overflow: hidden; /* Hide overflow */
-  text-overflow: ellipsis; /* Add ellipsis to overflow text */
-  display: -webkit-box;
-  -webkit-line-clamp: 3; /* Number of lines you want to display */
-  -webkit-box-orient: vertical;
+  /* Remove the following properties to show full text */
+  /* overflow: hidden; */
+  /* text-overflow: ellipsis; */
+  /* display: -webkit-box; */
+  /* -webkit-line-clamp: 3; */
+  /* -webkit-box-orient: vertical; */
 }
 
 .project-card {
-  text-decoration: none; /* Removes underline from links */
-  color: inherit; /* Inherits text color from parent elements */
-  display: block; /* Ensures the anchor tag behaves like a block element */
-  margin-bottom: 40px; /* Space between project cards */
-  width: 100%; /* Ensures the anchor tag takes full width */
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  margin-bottom: 40px;
+  width: 100%;
 }
 
 @media (max-width: 768px) {
   .project {
-    flex-direction: column; /* Stack elements on top of each other */
-    align-items: center; /* Center align items */
+    flex-direction: column;
+    align-items: center;
   }
 
   .project-image {
-    width: 80%; /* Adjust width on small screens */
-    height: auto; /* Adjust height on small screens */
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* Maintain aspect ratio while fitting smaller screens */
   }
 
   .project-details {
-    width: 100%; /* Full width for details */
-    text-align: center; /* Center text on small screens */
+    width: 100%;
+    text-align: left; /* Align text to the left for better readability */
   }
 
   .project-title,
   .project-description {
-    white-space: normal; /* Allow wrapping on small screens */
+    white-space: normal;
   }
 }
