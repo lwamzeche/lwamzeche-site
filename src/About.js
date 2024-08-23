@@ -51,8 +51,7 @@ function About() {
             </p>
 
             <p>
-              Recently, in the summer of 2024, I also started a research
-              internship at{" "}
+              Recently, I also started a research internship at{" "}
               <a
                 href="https://make.kaist.ac.kr/about"
                 target="_blank"
