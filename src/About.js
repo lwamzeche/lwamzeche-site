@@ -68,13 +68,6 @@ function About() {
                 Andrea Bianchi.
               </a>
             </p>
-            <p>
-              I am seeking PhD programs in HCI starting in Fall 2025, with the
-              goal of contributing to the development of more intuitive and
-              immersive human-computer interfaces. I'm particularly excited
-              about the potential of combining neuroscience insights with HCI to
-              create more natural and effective interaction paradigms.
-            </p>
           </div>
         </div>
         <div className="about-image-wrapper">
