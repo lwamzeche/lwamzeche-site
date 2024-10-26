@@ -34,7 +34,8 @@ const projects = [
     description:
       "In this individual reaserch I am working on replication a work that has been done on providing haptics to walls & heavy objects in virtual reality by means of electrical muscle stimulation then Working on utilizing EMS to provide screen haptic feedback to improve the usability of a virtual touchscreen in VR.",
     imageUrl: EMS,
-    // projectUrl: "https://youtu.be/HajAyAW5QAY?si=LhELFyv5BmgTrqcb",
+    projectUrl:
+      "https://drive.google.com/file/d/1duBV3BXTQirWYDLYiGaUR7t_sfzKKJJ3/view?usp=sharing",
   },
 
   {

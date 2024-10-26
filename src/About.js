@@ -37,9 +37,9 @@ function About() {
 
             <p>
               My research interests lie in Human-Computer Interaction (HCI),
-              Wearable devices, Haptics, and Neuroscience (NeuroHCI). I am
-              currently conducting individual research aimed at overcoming the
-              lack of haptic feedback in VR interactions using Electrical Muscle
+              Wearable devices, Haptics, and Neuroscience (NeuroHCI). I
+              conducted individual research aimed at overcoming the lack of
+              haptic feedback in VR interactions using Electrical Muscle
               Stimulation (EMS) under the guidance of Professor{" "}
               <a
                 href="https://cs.kaist.ac.kr/people/view?idx=372&kind=faculty&menu=172"
@@ -51,7 +51,7 @@ function About() {
             </p>
 
             <p>
-              Recently, I also started a research internship at{" "}
+              Recently, I am doing research internship at{" "}
               <a
                 href="https://make.kaist.ac.kr/about"
                 target="_blank"
@@ -65,8 +65,9 @@ function About() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Andrea Bianchi.
+                Andrea Bianchi
               </a>
+              . I am looking for PhD programs for Fall 2025.
             </p>
           </div>
         </div>
