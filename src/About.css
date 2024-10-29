@@ -24,8 +24,8 @@
 }
 
 .about-image {
-  width: 400px;
-  height: 400px; /* Adjusts to your preference */
+  width: 320px;
+  height: 320px; /* Adjusts to your preference */
   object-fit: cover;
   margin-bottom: 20px; /* Space below the image */
   padding-right: 10px;
@@ -45,8 +45,8 @@
 /* Link Styling */
 .about-links {
   display: flex;
-  gap: 15px; /* Spaces out the links */
-  margin-top: 20px; /* Space above the links */
+  gap: 27px; /* Spaces out the links */
+  margin-top: 15px; /* Space above the links */
   flex-wrap: wrap; /* Allows links to wrap on smaller screens */
 }
 
