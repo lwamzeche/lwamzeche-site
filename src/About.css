@@ -25,7 +25,7 @@
 
 .about-image {
   width: 320px;
-  height: 320px; /* Adjusts to your preference */
+  height: 380px; /* Adjusts to your preference */
   object-fit: cover;
   margin-bottom: 20px; /* Space below the image */
   padding-right: 10px;

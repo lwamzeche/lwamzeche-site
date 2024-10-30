@@ -1,6 +1,6 @@
 import React from "react";
 import "./About.css";
-import LwamImage from "./images/Lwam2.jpeg";
+import LwamImage from "./images/LWam6.jpeg";
 
 function About() {
   return (
