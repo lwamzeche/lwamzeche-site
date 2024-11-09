@@ -18,8 +18,10 @@ function App() {
       <div className="App">
         {/* Sidebar */}
         <div className="sidebar">
-          {/* Logo */}
-          <h1 className="logo">Lwam Zeche</h1>
+          {/* Logo - Wrap it in a Link to make it clickable */}
+          <Link to="/about" className="logo">
+            <h1>Lwam Zeche</h1>
+          </Link>
           {/* Profile Picture */}
           <img src={LwamImage} alt="Lwam" className="profile-image" />
           {/* Navigation Links */}
