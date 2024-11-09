@@ -1,62 +1,71 @@
 /* Projects.css */
 
+/* Root Container for Projects Page */
+.projects-content {
+  padding: 0;
+}
+
+/* Container for All Projects */
 .projects-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 0px 20px 20px;
   gap: 40px;
-  width: 100%;
+  max-width: 1100px; /* Adjust as needed */
+  margin-left: 300px; /* Shift container to the right by 100px */
 }
 
+/* Individual Project Card */
+.project-card {
+  text-decoration: none;
+  color: inherit;
+  /* display: block; */
+}
+
+/* Project Card Layout */
 .project {
   display: flex;
-  align-items: start;
+  align-items: flex-start;
   gap: 20px;
-  max-width: 85%;
   padding: 20px;
+  /* Optional: Add a border or shadow */
+  /* border: 1px solid #ddd; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Project Image */
 .project-image {
   width: 300px;
   height: 200px;
   object-fit: cover;
   flex-shrink: 0;
+  border-radius: 8px;
 }
 
+/* Project Details */
 .project-details {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-width: 0;
 }
 
+/* Project Title */
 .project-title {
-  font-size: 1.5em;
-  margin: 0 0 10px 0;
+  font-size: 1.8rem;
+  margin-bottom: 10px;
 }
 
+/* Project Description */
 .project-description {
-  font-size: 1.2em;
-  margin: 0;
-  /* Remove the following properties to show full text */
-  /* overflow: hidden; */
-  /* text-overflow: ellipsis; */
-  /* display: -webkit-box; */
-  /* -webkit-line-clamp: 3; */
-  /* -webkit-box-orient: vertical; */
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
-.project-card {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  margin-bottom: 40px;
-  width: 100%;
+/* Hover Effect */
+.project-card:hover .project-title {
+  text-decoration: underline;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
   .project {
     flex-direction: column;
@@ -66,12 +75,12 @@
   .project-image {
     width: 100%;
     height: auto;
-    max-width: 300px; /* Maintain aspect ratio while fitting smaller screens */
+    max-width: 300px;
   }
 
   .project-details {
     width: 100%;
-    text-align: left; /* Align text to the left for better readability */
+    text-align: left;
   }
 
   .project-title,
