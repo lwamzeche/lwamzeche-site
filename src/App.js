@@ -1,74 +1,110 @@
-// App.js
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Link,
   Navigate,
 } from "react-router-dom";
 import About from "./About";
-import Projects from "./Projects";
 import "./App.css";
 import LwamImage from "./images/Lwam7.jpeg";
 
+function Sidebar({ activeSection }) {
+  return (
+    <div className="sidebar">
+      {/* Profile Picture */}
+      <img src={LwamImage} alt="Lwam" className="profile-image" />
+
+      {/* Navigation Links */}
+      <nav className="navigation">
+        <a
+          href="#about-me"
+          className={`nav-item ${activeSection === "about-me" ? "active" : ""}`}
+        >
+          About me
+        </a>
+        <a
+          href="#projects"
+          className={`nav-item ${activeSection === "projects" ? "active" : ""}`}
+        >
+          Projects
+        </a>
+        <a href="mailto:lwamzeche@kaist.ac.kr" className="nav-item">
+          Email
+        </a>
+        <a
+          href="https://drive.google.com/file/d/18KPimD9wZ1QCPlOfkYX5vV38qcx0e9Yu/view?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="nav-item"
+        >
+          CV
+        </a>
+        <a
+          href="https://x.com/lwam_zeche"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="nav-item"
+        >
+          Twitter
+        </a>
+        <a
+          href="https://hci.social/@lwam"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="nav-item"
+        >
+          Mastodon
+        </a>
+      </nav>
+    </div>
+  );
+}
+
 function App() {
+  const [activeSection, setActiveSection] = useState("about-me");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const aboutMe = document.getElementById("about-me");
+      const projects = document.getElementById("projects");
+
+      if (aboutMe && projects) {
+        const aboutMeTop = aboutMe.getBoundingClientRect().top;
+        const projectsTop = projects.getBoundingClientRect().top;
+
+        // Update the active section based on scroll position
+        if (projectsTop <= window.innerHeight / 2) {
+          setActiveSection("projects");
+        } else if (aboutMeTop <= window.innerHeight / 2) {
+          setActiveSection("about-me");
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <Router>
       <div className="App">
-        {/* Sidebar */}
-        <div className="sidebar">
-          {/* Logo - Wrap it in a Link to make it clickable
-          <Link to="/about" className="logo">
-            <h1>Lwam Zeche</h1>
-          </Link> */}
-          {/* Profile Picture */}
-          <img src={LwamImage} alt="Lwam" className="profile-image" />
-          {/* Navigation Links */}
-          <nav className="navigation">
-            <Link to="/about" className="nav-item">
-              About me
-            </Link>
-            <Link to="/projects" className="nav-item">
-              Projects
-            </Link>
-            <a href="mailto:lwamzeche@kaist.ac.kr" className="nav-item">
-              Email
-            </a>
-            <a
-              href="https://drive.google.com/file/d/18KPimD9wZ1QCPlOfkYX5vV38qcx0e9Yu/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="nav-item"
-            >
-              CV
-            </a>
-            <a
-              href="https://x.com/lwam_zeche"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="nav-item"
-            >
-              Twitter
-            </a>
-            <a
-              href="https://hci.social/@lwam"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="nav-item"
-            >
-              Mastodon
-            </a>
-          </nav>
-        </div>
-
+        <Sidebar activeSection={activeSection} />
         {/* Main Content */}
         <div className="main-content">
           <Routes>
-            <Route path="/" element={<Navigate to="/about" replace />} />
+            <Route
+              path="/"
+              element={<Navigate to="/about#about-me" replace />}
+            />
             <Route path="/about" element={<About />} />
-            <Route path="/projects" element={<Projects />} />
-            <Route path="*" element={<Navigate to="/about" replace />} />
+            <Route
+              path="*"
+              element={<Navigate to="/about#about-me" replace />}
+            />
           </Routes>
         </div>
       </div>

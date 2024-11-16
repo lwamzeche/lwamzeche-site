@@ -57,13 +57,14 @@
 /* Main Content Styling */
 .about-content {
   margin-left: 270px; /* Equal to sidebar width + padding */
-  padding: 40px 50px; /* Top and horizontal padding */
+  padding: 0px 30px; /* Top and horizontal padding */
   max-width: 800px; /* Optional: limit the width for better readability */
 }
 
 .about-title {
-  font-size: 2.4rem;
+  font-size: 2.5rem;
   margin-bottom: 20px;
+  font-family: "Sacramento", cursive;
 }
 
 .about-text {
@@ -83,6 +84,16 @@
 
 .about-text a:hover {
   text-decoration: underline;
+}
+
+.projects-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #333;
+  margin-left: 250px; /* Equal to sidebar width + padding */
+  padding: 40px 50px;
 }
 
 /* Responsive Adjustments */
