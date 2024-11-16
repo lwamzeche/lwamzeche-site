@@ -10,7 +10,7 @@ import {
 import About from "./About";
 import Projects from "./Projects";
 import "./App.css";
-import LwamImage from "./images/LWam6.jpeg";
+import LwamImage from "./images/Lwam7.jpeg";
 
 function App() {
   return (
