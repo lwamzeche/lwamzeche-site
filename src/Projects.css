@@ -11,7 +11,7 @@
   flex-direction: column;
   gap: 40px;
   max-width: 1100px; /* Adjust as needed */
-  margin-left: 300px; /* Shift container to the right by 100px */
+  /* margin-left: 300px;  */
 }
 
 /* Individual Project Card */

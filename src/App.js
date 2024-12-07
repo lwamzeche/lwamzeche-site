@@ -1,34 +1,40 @@
 import React, { useState, useEffect } from "react";
 import {
+  Link,
   BrowserRouter as Router,
   Route,
   Routes,
   Navigate,
+  useLocation,
 } from "react-router-dom";
 import About from "./About";
+import Note from "./Note";
 import "./App.css";
 import LwamImage from "./images/Lwam7.jpeg";
 
 function Sidebar({ activeSection }) {
   return (
     <div className="sidebar">
-      {/* Profile Picture */}
       <img src={LwamImage} alt="Lwam" className="profile-image" />
-
-      {/* Navigation Links */}
       <nav className="navigation">
-        <a
-          href="#about-me"
+        <Link
+          to="/about#about-me"
           className={`nav-item ${activeSection === "about-me" ? "active" : ""}`}
         >
           About me
-        </a>
-        <a
-          href="#projects"
+        </Link>
+        <Link
+          to="/about#projects"
           className={`nav-item ${activeSection === "projects" ? "active" : ""}`}
         >
           Projects
-        </a>
+        </Link>
+        <Link
+          to="/note"
+          className={`nav-item ${activeSection === "note" ? "active" : ""}`}
+        >
+          Note
+        </Link>
         <a href="mailto:lwamzeche@kaist.ac.kr" className="nav-item">
           Email
         </a>
@@ -61,23 +67,53 @@ function Sidebar({ activeSection }) {
   );
 }
 
-function App() {
+function ScrollToSection() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const element = document.getElementById(location.hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [location]);
+
+  return null;
+}
+
+function AppContent() {
   const [activeSection, setActiveSection] = useState("about-me");
+  const location = useLocation();
+
+  useEffect(() => {
+    const updateActiveSectionBasedOnRoute = () => {
+      if (location.pathname === "/note") {
+        setActiveSection("note");
+      } else if (location.pathname === "/about") {
+        const hash = location.hash || "#about-me";
+        setActiveSection(hash.substring(1));
+      }
+    };
+
+    updateActiveSectionBasedOnRoute();
+  }, [location]);
 
   useEffect(() => {
     const handleScroll = () => {
-      const aboutMe = document.getElementById("about-me");
-      const projects = document.getElementById("projects");
+      if (location.pathname === "/about") {
+        const aboutMe = document.getElementById("about-me");
+        const projects = document.getElementById("projects");
 
-      if (aboutMe && projects) {
-        const aboutMeTop = aboutMe.getBoundingClientRect().top;
-        const projectsTop = projects.getBoundingClientRect().top;
+        if (aboutMe && projects) {
+          const aboutMeTop = aboutMe.getBoundingClientRect().top;
+          const projectsTop = projects.getBoundingClientRect().top;
 
-        // Update the active section based on scroll position
-        if (projectsTop <= window.innerHeight / 2) {
-          setActiveSection("projects");
-        } else if (aboutMeTop <= window.innerHeight / 2) {
-          setActiveSection("about-me");
+          if (projectsTop <= window.innerHeight / 2) {
+            setActiveSection("projects");
+          } else if (aboutMeTop <= window.innerHeight / 2) {
+            setActiveSection("about-me");
+          }
         }
       }
     };
@@ -87,26 +123,29 @@ function App() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [location.pathname]);
 
+  return (
+    <>
+      <ScrollToSection />
+      <Sidebar activeSection={activeSection} />
+      <div className="main-content">
+        <Routes>
+          <Route path="/" element={<Navigate to="/about" replace />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/note" element={<Note />} />
+          <Route path="*" element={<Navigate to="/about" replace />} />
+        </Routes>
+      </div>
+    </>
+  );
+}
+
+function App() {
   return (
     <Router>
       <div className="App">
-        <Sidebar activeSection={activeSection} />
-        {/* Main Content */}
-        <div className="main-content">
-          <Routes>
-            <Route
-              path="/"
-              element={<Navigate to="/about#about-me" replace />}
-            />
-            <Route path="/about" element={<About />} />
-            <Route
-              path="*"
-              element={<Navigate to="/about#about-me" replace />}
-            />
-          </Routes>
-        </div>
+        <AppContent />
       </div>
     </Router>
   );
