@@ -87,4 +87,11 @@
   .project-description {
     white-space: normal;
   }
+  .projects-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    max-width: 100%; /* Adjust as needed */
+    /* margin-left: 300px;  */
+  }
 }
