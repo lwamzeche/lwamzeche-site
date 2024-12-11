@@ -1,7 +1,7 @@
 /* App.css */
 .navigation {
   display: flex;
-  flex-direction: column; /* Adjusted for vertical sidebar */
+  flex-direction: column;
   align-items: flex-start;
   /* padding: 20px 40px; */
   background-color: transparent;
@@ -27,7 +27,7 @@
 
 .profile-image {
   width: 150px;
-  height: 150px;
+  height: 160px;
   border-radius: 50%;
   /* margin: 20px auto; */
 }
@@ -50,23 +50,24 @@
 }
 
 .main-content {
-  flex: 1; /* Take remaining space */
+  flex: 1;
   /* padding: 20px; */
   box-sizing: border-box; /* Include padding in width */
-  margin-left: 0; /* Remove any unnecessary left margin */
+  margin-left: 0;
 }
 
 /* For smaller screens */
 @media (max-width: 768px) {
   .App {
-    flex-direction: column; /* Stack Sidebar and Content */
+    flex-direction: column;
   }
   .navigation {
     padding: 10px 20px;
   }
 
   .profile-image {
-    display: none;
+    width: 120px;
+    height: 120px;
   }
 
   .sidebar {
