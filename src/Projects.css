@@ -76,22 +76,25 @@
     width: 100%;
     height: auto;
     max-width: 300px;
+    display: none;
   }
 
   .project-details {
     width: 100%;
     text-align: left;
+    margin-left: 0;
   }
 
   .project-title,
   .project-description {
     white-space: normal;
+    margin-left: 0;
   }
   .projects-container {
     display: flex;
     flex-direction: column;
     gap: 40px;
     max-width: 100%; /* Adjust as needed */
-    /* margin-left: 300px;  */
+    margin-left: 0;
   }
 }
