@@ -1,38 +1,39 @@
 /* Projects.css */
 
-/* Root Container for Projects Page */
 .projects-content {
   padding: 0;
 }
+.title {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  text-align: left;
+  color: black;
+  margin-left: 0px;
+}
 
-/* Container for All Projects */
 .projects-container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  max-width: 1100px; /* Adjust as needed */
-  /* margin-left: 300px;  */
+  max-width: 900px;
+  /* margin-left: 300px; */
+  margin-top: 0px;
 }
 
-/* Individual Project Card */
 .project-card {
   text-decoration: none;
   color: inherit;
   /* display: block; */
 }
 
-/* Project Card Layout */
 .project {
   display: flex;
   align-items: flex-start;
   gap: 20px;
   padding: 20px;
-  /* Optional: Add a border or shadow */
-  /* border: 1px solid #ddd; */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Project Image */
 .project-image {
   width: 300px;
   height: 200px;
@@ -41,20 +42,17 @@
   border-radius: 8px;
 }
 
-/* Project Details */
 .project-details {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
 }
 
-/* Project Title */
 .project-title {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
-/* Project Description */
 .project-description {
   font-size: 1.1rem;
   line-height: 1.6;
@@ -76,34 +74,53 @@
     width: 100%;
     height: auto;
     max-width: 300px;
-    display: none;
   }
 
   .project-details {
     width: 100%;
     text-align: left;
-    //margin-left: 0;
   }
 
   .project-title,
   .project-description {
     white-space: normal;
-    //margin-left: 0;
+    margin-left: 0;
   }
+
   .projects-container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    max-width: 100%; /* Adjust as needed */
+    max-width: 100%;
     margin-left: 0;
+    margin-top: 0px;
   }
 }
 @media (max-width: 480px) {
+  .project {
+    flex-direction: column;
+    align-items: left;
+  }
+
+  .project-image {
+    display: None;
+  }
+
+  .project-details {
+    width: 100%;
+    text-align: left;
+  }
+
+  .project-title,
+  .project-description {
+    white-space: normal;
+    margin-left: 0;
+  }
+
   .projects-container {
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    max-width: 100%; /* Adjust as needed */
+    max-width: 100%;
     margin-left: 0;
+    margin-top: 0px;
   }
 }

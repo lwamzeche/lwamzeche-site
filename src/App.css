@@ -74,3 +74,19 @@
     width: 200px;
   }
 }
+@media (max-width: 480px) {
+  .App {
+    flex-direction: column;
+  }
+  .navigation {
+    padding: 10px 20px;
+  }
+
+  .profile-image {
+    display: None;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+}
