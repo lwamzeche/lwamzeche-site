@@ -79,7 +79,7 @@
     flex-direction: column;
   }
   .navigation {
-    padding: 10px 20px;
+    padding: 10px;
   }
 
   .profile-image {
@@ -88,5 +88,6 @@
 
   .sidebar {
     width: 200px;
+    align-items: left;
   }
 }
