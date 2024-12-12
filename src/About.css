@@ -56,7 +56,7 @@
 
 /* Main Content Styling */
 .about-content {
-  //margin-left: 270px;
+  margin-left: 270px;
   padding: 0px 30px; /* Top and horizontal padding */
   max-width: 800px;
 }
@@ -92,7 +92,7 @@
   margin-bottom: 5px;
   text-align: left;
   color: black;
-  /* margin-left: 250px; */
+  margin-left: 270px;
   padding: 30px 30px;
 }
 

@@ -79,7 +79,7 @@ function About() {
 
       {/* Projects Section */}
       <div id="projects" className="projects-section">
-        <h1 className="projects-title">Projects</h1> {/* Add the title */}
+        <h1 className="projects-title">My Projects</h1> {/* Add the title */}
         <Projects />
       </div>
     </div>

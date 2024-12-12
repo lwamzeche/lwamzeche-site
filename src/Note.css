@@ -19,9 +19,6 @@
 }
 
 /* Ensure it clears the navigation bar */
-body {
-  padding-left: 250px; /* Adjust this value to the width of your nav bar */
-}
 
 @media (max-width: 768px) {
   /* body {
