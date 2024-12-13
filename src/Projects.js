@@ -9,6 +9,8 @@ import PianoRing from "./images/PianoRing.png";
 import EMS from "./images/EMS.jpeg";
 import CoffeeBuddy from "./images/CoffeeBuddy.png";
 import Pico from "./images/pico.jpeg";
+import LwamTMS from "./images/LwamTMS.png";
+import CancerCells from "./images/Cancer.png";
 
 const projects = [
   {
@@ -56,11 +58,30 @@ const projects = [
   },
   {
     id: 6,
+    title:
+      "Rehabilitation Program Design Using TMS for Post-Stroke Hand Motor Recovery",
+    description:
+      "A 6-month program combining Transcranial Magnetic Stimulation (TMS) with task-oriented therapy to enhance hand motor function after stroke. My proposal is about a program that uses evidence-based rTMS protocols to promote neuroplasticity, paired with progressive rehabilitation exercises to restore dexterity and improve independence.",
+    imageUrl: LwamTMS,
+    projectUrl:
+      "https://drive.google.com/file/d/1hilM2fDOnNbSjzWcTUm6b5HJ9cGK4tG0/view?usp=sharing",
+  },
+  {
+    id: 7,
     title: "Steam Dex",
     description:
       "A website that analyzes various indie games from Steam, providing details such as price, budget, revenue, review count, and tags. It enables users to search for games by name, price, revenue, and tags.",
     imageUrl: steamDexImage,
     projectUrl: "https://steam-dex.com/",
+  },
+  {
+    id: 7,
+    title: "Breast Cancer Histology Image Classification",
+    description:
+      "My teammates and I improved the development of a two-step convolutional neural network (CNN) pipeline that integrated local and global image features to classify tissue samples into benign, in situ, and invasive carcinoma categories.",
+    imageUrl: CancerCells,
+    projectUrl:
+      "https://github.com/lwamzeche/BreastCancerHistologyImageClassification",
   },
 ];
 

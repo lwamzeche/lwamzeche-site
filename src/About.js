@@ -10,9 +10,12 @@ function About() {
         <h1 className="about-title">Lwam Zeche</h1>
         <div className="about-text">
           <p>
-            Hey there, my name is Lwam Zemikael Araya. I am an undergraduate
+            Hey there! My name is Lwam Zemikael Araya. I am an undergraduate
             student at KAIST, majoring in Computer Science with a minor in Brain
-            and Cognitive Sciences.
+            and Cognitive Sciences. I graduated from Kallamino Special High
+            School in Ethiopia and am also an Addis Coder 2019 alum. I enjoy
+            rewatching the TV show Friends and listening to spoken word poetry.
+            :)
           </p>
           <p>
             I have gained industry experience through internships in website

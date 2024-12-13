@@ -44,7 +44,7 @@
 .sidebar {
   width: 250px; /* Sidebar width */
   flex-shrink: 0;
-  background-color: #f5f5f5;
+  /* background-color: #f5f5f5; */
   /* padding: 20px; */
   box-sizing: border-box;
 }
