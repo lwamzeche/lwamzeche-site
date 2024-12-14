@@ -1,21 +1,18 @@
 .note-container {
   font-family: "Georgia", "Times New Roman", serif; /* Elegant font */
   line-height: 1.8; /* Spaced-out text for readability */
-  padding: 20px;
-  margin: 20px auto;
-  max-width: 600px; /* Centered container with fixed width */
+  //padding: 20px;
+  //margin: 20px auto;
+  //max-width: 600px; /* Centered container with fixed width */
   border-radius: 10px; /* Rounded corners */
   /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  */
   text-align: center;
-  position: relative; /* Allows positioning relative to its parent */
-  z-index: 1; /* Ensures it's above other elements like nav bars */
-}
+  //position: relative; /* Allows positioning relative to its parent */
+  //z-index: 1; /* Ensures it's above other elements like nav bars */
 
-/* Adjustments for responsiveness */
-@media (max-width: 768px) {
-  .note-container {
-    margin: 20px 10px; /* Reduce margin for smaller screens */
-  }
+  margin-left: 270px;
+  padding: 0px 30px; /* Top and horizontal padding */
+  max-width: 800px;
 }
 
 /* Ensure it clears the navigation bar */
@@ -24,6 +21,12 @@
   /* body {
     padding-left: 0; 
   } */
+  .note-container {
+    /* margin: 20px 50px; /* Reduce margin for smaller screens */
+    /* text-align: center; */
+    margin-left: 0;
+    margin-top: 20px;
+  }
   .App {
     flex-direction: column; /* Stack Sidebar and Content */
   }

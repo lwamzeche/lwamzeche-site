@@ -38,20 +38,24 @@ function About() {
           </p>
           <p>
             My research interests lie in Human-Computer Interaction (HCI),
-            Wearable devices, Haptics, and Neuroscience (NeuroHCI). I conducted
-            individual research aimed at overcoming the lack of haptic feedback
-            in VR interactions using Electrical Muscle Stimulation (EMS) under
-            the guidance of Professor{" "}
+            Wearable devices, Haptics, and Neuroscience (NeuroHCI). I am
+            particularly passionate about creating technologies that empower
+            physicians and enhance medical care, such as devices for early
+            disease detection, immersive medical training, and tools to support
+            underserved populations.
+          </p>
+          <p>
+            I conducted individual research aimed at overcoming the lack of
+            haptic feedback in VR interactions using Electrical Muscle
+            Stimulation (EMS) under the guidance of Professor{" "}
             <a
               href="https://cs.kaist.ac.kr/people/view?idx=372&kind=faculty&menu=172"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Geehyuk Lee.
+              Geehyuk Lee
             </a>
-          </p>
-          <p>
-            Recently, I am doing a research internship at{" "}
+            . Recently, I am doing a research internship at{" "}
             <a
               href="https://make.kaist.ac.kr/about"
               target="_blank"
