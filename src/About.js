@@ -13,49 +13,19 @@ function About() {
             Hey there! My name is Lwam Zemikael Araya. I am an undergraduate
             student at KAIST, majoring in Computer Science with a minor in Brain
             and Cognitive Sciences. I graduated from Kallamino Special High
-            School in Ethiopia and am also an Addis Coder 2019 alum. I enjoy
-            rewatching the TV show Friends and listening to spoken word poetry.
-            :)
+            School and am also an Addis Coder 2019 alum. I enjoy rewatching the
+            TV show Friends and listening to spoken word poetry. :)
           </p>
-          <p>
-            I have gained industry experience through internships in website
-            development at{" "}
-            <a
-              href="https://www.sentience.rocks/#team"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Sentience
-            </a>{" "}
-            and game development using Unity at{" "}
-            <a
-              href="https://www.bastionrobotics.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Bastion Robotics.
-            </a>
-          </p>
+
           <p>
             My research interests lie in Human-Computer Interaction (HCI),
             Wearable devices, Haptics, and Neuroscience (NeuroHCI). I am
             particularly passionate about creating technologies that empower
             physicians and enhance medical care, such as devices for early
-            disease detection, immersive medical training, and tools to support
-            underserved populations.
+            disease detection and immersive medical training.
           </p>
           <p>
-            I conducted individual research aimed at overcoming the lack of
-            haptic feedback in VR interactions using Electrical Muscle
-            Stimulation (EMS) under the guidance of Professor{" "}
-            <a
-              href="https://cs.kaist.ac.kr/people/view?idx=372&kind=faculty&menu=172"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Geehyuk Lee
-            </a>
-            . Recently, I am doing a research internship at{" "}
+            Recently, I am doing a research internship at{" "}
             <a
               href="https://make.kaist.ac.kr/about"
               target="_blank"
