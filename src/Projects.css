@@ -63,6 +63,23 @@
   text-decoration: underline;
 }
 
+.project-keywords {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 10px 0 0 0;
+  list-style: none;
+}
+
+.keyword-item {
+  background-color: #f0f0f0;
+  color: #333;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .project {

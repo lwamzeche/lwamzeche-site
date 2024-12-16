@@ -20,6 +20,7 @@ const projects = [
       "A piano learning device that combines haptic feedback with key guidance projection to facilitate independent learning. It features gloves with vibratory motors and LED indicators that synchronize with corresponding piano keys, offering real-time tactile and visual guidance. Designed to enhance muscle memory and finger coordination.",
     imageUrl: PianoRing,
     projectUrl: "https://youtu.be/HajAyAW5QAY?si=LhELFyv5BmgTrqcb",
+    keywords: ["HCI", "Wearable UI", "Haptics", "Music Education"],
   },
   {
     id: 2,
@@ -29,6 +30,7 @@ const projects = [
     imageUrl: Roomie,
     projectUrl:
       "https://github.com/lwamzeche/Roommate_Matching?tab=readme-ov-file",
+    keywords: ["Mobile App", "Flutter", "Firebase", "Social Connection"],
   },
   {
     id: 3,
@@ -38,6 +40,7 @@ const projects = [
     imageUrl: EMS,
     projectUrl:
       "https://drive.google.com/file/d/1duBV3BXTQirWYDLYiGaUR7t_sfzKKJJ3/view?usp=sharing",
+    keywords: ["VR", "HCI", "Haptics", "Research", "EMS"],
   },
   {
     id: 4,
@@ -45,7 +48,7 @@ const projects = [
     description:
       "Currently developing a system aimed at enabling real-time control of physical resistance values through a web interface. The project uses a Raspberry Pi Pico to bridge a web server with variable resistance hardware, allowing users to input desired resistance values via a web interface.",
     imageUrl: Pico,
-    // Add projectUrl if available
+    keywords: ["IoT", "Hardware", "Web Interface", "Raspberry Pi Pico"],
   },
   {
     id: 5,
@@ -55,6 +58,7 @@ const projects = [
     imageUrl: CoffeeBuddy,
     projectUrl:
       "https://www.figma.com/proto/mQYCu43StvpWWiq25stbrn/Intro-to-HCI-Project?page-id=575%3A1174&node-id=1113-2561&viewport=101%2C115%2C0.04&t=eVlmdJYjOotpU24r-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1113%3A2561",
+    keywords: ["Mobile App", "Health Tracking", "Personalized Feedback"],
   },
   {
     id: 6,
@@ -65,6 +69,7 @@ const projects = [
     imageUrl: LwamTMS,
     projectUrl:
       "https://drive.google.com/file/d/1hilM2fDOnNbSjzWcTUm6b5HJ9cGK4tG0/view?usp=sharing",
+    keywords: ["Neuroscience", "Rehabilitation", "Healthcare", "TMS"],
   },
   {
     id: 7,
@@ -73,24 +78,24 @@ const projects = [
       "A website that analyzes various indie games from Steam, providing details such as price, budget, revenue, review count, and tags. It enables users to search for games by name, price, revenue, and tags.",
     imageUrl: steamDexImage,
     projectUrl: "https://steam-dex.com/",
+    keywords: ["Web App", "Data Analysis", "Gaming", "Search Functionality"],
   },
   {
-    id: 7,
+    id: 8,
     title: "Breast Cancer Histology Image Classification",
     description:
       "My teammates and I improved the development of a two-step convolutional neural network (CNN) pipeline that integrated local and global image features to classify tissue samples into benign, in situ, and invasive carcinoma categories.",
     imageUrl: CancerCells,
     projectUrl:
       "https://github.com/lwamzeche/BreastCancerHistologyImageClassification",
+    keywords: ["Machine Learning", "Medical Imaging", "CNN", "Healthcare"],
   },
 ];
 
 function Projects() {
   return (
     <div className="projects-container">
-      {/* <h1 className="projects-title">Projects</h1> */}
       {projects.map((project) => (
-        // Wrap the contents of the project card in an anchor tag if projectUrl exists
         <a
           key={project.id}
           href={project.projectUrl ? project.projectUrl : "#"}
@@ -107,6 +112,15 @@ function Projects() {
             <div className="project-details">
               <h2 className="project-title">{project.title}</h2>
               <p className="project-description">{project.description}</p>
+              {project.keywords && project.keywords.length > 0 && (
+                <ul className="project-keywords">
+                  {project.keywords.map((keyword, index) => (
+                    <li key={index} className="keyword-item">
+                      {keyword}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
         </a>
