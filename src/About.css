@@ -10,15 +10,15 @@
 .sidebar {
   width: 250px;
   position: fixed;
-  top: 0;
+  top: 40;
   left: 0;
   height: 100%;
   padding: 20px 20px;
-  background-color: #f5f5f5; /* Light background color */
+  //background-color: #f5f5f5; /* Light background color */
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  //box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -42,13 +42,13 @@
   align-items: center;
 }
 
-.navigation a {
+/* .navigation a {
   color: black;
   text-decoration: none;
   margin-bottom: 15px;
   font-weight: bold;
   font-size: 16px;
-}
+} */
 
 .navigation a:hover {
   text-decoration: underline;
@@ -57,7 +57,7 @@
 /* Main Content Styling */
 .about-content {
   margin-left: 270px;
-  padding: 0px 30px; /* Top and horizontal padding */
+  padding: 40px 30px; /* Top and horizontal padding */
   max-width: 800px;
 }
 
@@ -94,6 +94,7 @@
   color: black;
   margin-left: 270px;
   padding: 30px 30px;
+  /* font-family: "Sacramento", cursive;  */
 }
 
 /* Responsive Adjustments */

@@ -58,7 +58,7 @@ const projects = [
     imageUrl: CoffeeBuddy,
     projectUrl:
       "https://www.figma.com/proto/mQYCu43StvpWWiq25stbrn/Intro-to-HCI-Project?page-id=575%3A1174&node-id=1113-2561&viewport=101%2C115%2C0.04&t=eVlmdJYjOotpU24r-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1113%3A2561",
-    keywords: ["Mobile App", "Health Tracking", "Personalized Feedback"],
+    keywords: ["Mobile App", "Health Tracking", "Personalized Feedback", "Figma"],
   },
   {
     id: 6,

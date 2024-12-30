@@ -15,6 +15,7 @@ import LwamImage from "./images/Lwam7.jpeg";
 function Sidebar({ activeSection }) {
   return (
     <div className="sidebar">
+      {/* <h1 className="about-title">Lwam Zeche</h1> */}
       <img src={LwamImage} alt="Lwam" className="profile-image" />
       <nav className="navigation">
         <Link
@@ -35,14 +36,14 @@ function Sidebar({ activeSection }) {
         >
           Note
         </Link>
-        <a href="mailto:lwamzeche@kaist.ac.kr" className="nav-item">
+        <a href="mailto:lwamzeche@kaist.ac.kr" className="nav">
           Email
         </a>
         <a
           href="https://drive.google.com/file/d/18KPimD9wZ1QCPlOfkYX5vV38qcx0e9Yu/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
-          className="nav-item"
+          className="nav"
         >
           CV
         </a>
@@ -50,7 +51,7 @@ function Sidebar({ activeSection }) {
           href="https://x.com/lwam_zeche"
           target="_blank"
           rel="noopener noreferrer"
-          className="nav-item"
+          className="nav"
         >
           Twitter
         </a>
@@ -58,7 +59,7 @@ function Sidebar({ activeSection }) {
           href="https://hci.social/@lwam"
           target="_blank"
           rel="noopener noreferrer"
-          className="nav-item"
+          className="nav"
         >
           Mastodon
         </a>
