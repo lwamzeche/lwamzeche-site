@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {
   Link,
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Routes,
   Navigate,
@@ -56,12 +56,12 @@ function Sidebar({ activeSection }) {
           Twitter
         </a>
         <a
-          href="https://hci.social/@lwam"
+          href="https://medium.com/@lwzaraya"
           target="_blank"
           rel="noopener noreferrer"
           className="nav"
         >
-          Mastodon
+          Medium
         </a>
       </nav>
     </div>

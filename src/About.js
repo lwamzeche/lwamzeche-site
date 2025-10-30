@@ -10,22 +10,25 @@ function About() {
         <h1 className="about-title">Lwam Zeche</h1>
         <div className="about-text">
           <p>
-            Hey there! My name is Lwam Zemikael Araya. I am an undergraduate
-            student at KAIST, majoring in Computer Science with a minor in Brain
-            and Cognitive Sciences. I graduated from Kallamino Special High
-            School and am also an Addis Coder 2019 alum. I enjoy rewatching the
-            TV show Friends and listening to spoken word poetry. :)
+            Hii! I'm Lwam Zemikael Araya, a PhD student in the Electrical and
+            Computer Engineering at UC Davis under the guidance of Professor {}
+            <a
+              href="https://jeonggroup.ucdavis.edu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Hyoyoung Jeong
+            </a>
           </p>
 
           <p>
-            My research interests lie in Human-Computer Interaction (HCI),
-            Wearable devices, Haptics, and Neuroscience (NeuroHCI). I am
-            particularly passionate about creating technologies that empower
-            physicians and enhance medical care, such as devices for early
-            disease detection and immersive medical training.
+            My work spans on on wearable bioelectronics and wireless health
+            monitoring systems, especially I am curious about the heart and
+            cardiovascular diseases.
           </p>
           <p>
-            Recently, I am doing a research internship at{" "}
+            I graduated from KAIST Computer Science with Minor on Brain and
+            Cognitive Science. I did a research internship at{" "}
             <a
               href="https://make.kaist.ac.kr/about"
               target="_blank"
@@ -41,10 +44,9 @@ function About() {
             >
               Andrea Bianchi
             </a>
-            . I am looking for PhD programs for Fall 2025.
           </p>
           <a
-            href="https://drive.google.com/file/d/18KPimD9wZ1QCPlOfkYX5vV38qcx0e9Yu/view?usp=sharing"
+            href="https://drive.google.com/file/d/1IXE_iB0oEVu87kLhF1xtthXPGGKHKV4B/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-item"
