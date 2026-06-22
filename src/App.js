@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import {
   Link,
   HashRouter as Router,
@@ -8,44 +8,43 @@ import {
   useLocation,
 } from "react-router-dom";
 import About from "./About";
+import Projects from "./Projects";
+import ProjectDetail from "./Projectdetail";
 import Note from "./Note";
 import "./App.css";
-import LwamImage from "./images/Lwam7.jpeg";
+import LwamImage from "./images/Lwam1.jpeg";
 
-function Sidebar({ activeSection }) {
+function Sidebar() {
+  const { pathname } = useLocation();
+  // A nav item is active if the current path starts with its route.
+  const isActive = (route) =>
+    pathname === route || pathname.startsWith(route + "/");
+
   return (
     <div className="sidebar">
-      {/* <h1 className="about-title">Lwam Zeche</h1> */}
       <img src={LwamImage} alt="Lwam" className="profile-image" />
       <nav className="navigation">
         <Link
-          to="/about#about-me"
-          className={`nav-item ${activeSection === "about-me" ? "active" : ""}`}
+          to="/about"
+          className={`nav-item ${isActive("/about") ? "active" : ""}`}
         >
           About me
         </Link>
         <Link
-          to="/about#projects"
-          className={`nav-item ${activeSection === "projects" ? "active" : ""}`}
+          to="/projects"
+          className={`nav-item ${isActive("/projects") ? "active" : ""}`}
         >
           Projects
         </Link>
         <Link
           to="/note"
-          className={`nav-item ${activeSection === "note" ? "active" : ""}`}
+          className={`nav-item ${isActive("/note") ? "active" : ""}`}
         >
           Note
         </Link>
-        <a href="mailto:lwamzeche@kaist.ac.kr" className="nav">
+
+        <a href="mailto:lwamzeche93@gmail.com" className="nav">
           Email
-        </a>
-        <a
-          href="https://drive.google.com/file/d/18KPimD9wZ1QCPlOfkYX5vV38qcx0e9Yu/view?usp=sharing"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="nav"
-        >
-          CV
         </a>
         <a
           href="https://x.com/lwam_zeche"
@@ -63,77 +62,39 @@ function Sidebar({ activeSection }) {
         >
           Medium
         </a>
+        <a
+          href="https://substack.com/@lwamz?"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="nav"
+        >
+          Substack
+        </a>
       </nav>
     </div>
   );
 }
 
-function ScrollToSection() {
-  const location = useLocation();
-
+// Scroll back to the top whenever the route changes.
+function ScrollToTop() {
+  const { pathname } = useLocation();
   useEffect(() => {
-    if (location.hash) {
-      const element = document.getElementById(location.hash.substring(1));
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-    }
-  }, [location]);
-
+    window.scrollTo(0, 0);
+  }, [pathname]);
   return null;
 }
 
 function AppContent() {
-  const [activeSection, setActiveSection] = useState("about-me");
-  const location = useLocation();
-
-  useEffect(() => {
-    const updateActiveSectionBasedOnRoute = () => {
-      if (location.pathname === "/note") {
-        setActiveSection("note");
-      } else if (location.pathname === "/about") {
-        const hash = location.hash || "#about-me";
-        setActiveSection(hash.substring(1));
-      }
-    };
-
-    updateActiveSectionBasedOnRoute();
-  }, [location]);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (location.pathname === "/about") {
-        const aboutMe = document.getElementById("about-me");
-        const projects = document.getElementById("projects");
-
-        if (aboutMe && projects) {
-          const aboutMeTop = aboutMe.getBoundingClientRect().top;
-          const projectsTop = projects.getBoundingClientRect().top;
-
-          if (projectsTop <= window.innerHeight / 2) {
-            setActiveSection("projects");
-          } else if (aboutMeTop <= window.innerHeight / 2) {
-            setActiveSection("about-me");
-          }
-        }
-      }
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [location.pathname]);
-
   return (
     <>
-      <ScrollToSection />
-      <Sidebar activeSection={activeSection} />
+      <ScrollToTop />
+      <Sidebar />
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Navigate to="/about" replace />} />
           <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:slug" element={<ProjectDetail />} />
           <Route path="/note" element={<Note />} />
           <Route path="*" element={<Navigate to="/about" replace />} />
         </Routes>

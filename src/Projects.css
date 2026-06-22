@@ -1,145 +1,136 @@
-/* Projects.css */
+/* Projects.css — list view (editorial index, matches the detail page) */
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 
-.projects-content {
+.projects-page {
+  max-width: 720px;
+
+  --accent: #6e3fa3;
+  --ink: #1a1a1a;
+  --muted: #6b6b6b;
+  --hairline: #e6e6e6;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    sans-serif;
+  --serif: Georgia, "Times New Roman", serif;
+
+  color: var(--ink);
+}
+
+.projects-title {
+  font-family: "Sacramento", cursive;
+  font-size: 2.6rem;
+  margin: 0 0 4px;
+}
+
+.projects-intro {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+/* ---- List ---- */
+.project-list {
+  list-style: none;
   padding: 0;
-}
-.title {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  text-align: left;
-  color: black;
-  margin-left: 0px;
+  margin: 0;
 }
 
-.projects-container {
-  display: flex;
-  flex-direction: column;
-  max-width: 900px;
-  margin-left: 300px;
-  margin-top: 0px;
+.project-row {
+  border-top: 1px solid var(--hairline);
 }
 
-.project-card {
+.project-row:last-child {
+  border-bottom: 1px solid var(--hairline);
+}
+
+.project-link {
+  display: block;
+  padding: 28px 10px;
+  margin: 0 -10px;
   text-decoration: none;
   color: inherit;
-  /* display: block; */
+  border-radius: 10px;
+  transition: background 0.15s ease;
 }
 
-.project {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.project-link:hover {
+  background: #faf9fc;
 }
 
-.project-image {
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
-  flex-shrink: 0;
-  border-radius: 8px;
+.project-eyebrow {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 9px;
 }
 
-.project-details {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: column;
+.project-name {
+  font-family: var(--serif);
+  font-size: 1.55rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0 0 9px;
+  transition: color 0.15s ease;
 }
 
-.project-title {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
+.project-link:hover .project-name {
+  color: var(--accent);
 }
 
-.project-description {
-  font-size: 1.1rem;
+.project-summary {
+  font-family: var(--serif);
+  font-size: 1.08rem;
   line-height: 1.6;
+  color: #333;
+  margin: 0;
+  max-width: 60ch;
 }
 
-/* Hover Effect */
-.project-card:hover .project-title {
-  text-decoration: underline;
-}
-
-.project-keywords {
+.project-tags {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
+  gap: 7px;
   padding: 0;
-  margin: 10px 0 0 0;
-  list-style: none;
+  margin: 14px 0 0;
 }
 
-.keyword-item {
-  background-color: #f0f0f0;
-  color: #333;
-  margin: 5px;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 0.9rem;
+.project-tags li {
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  color: #4a4a4a;
+  background: #f4f1f8;
+  border: 1px solid #e7e1f0;
+  padding: 4px 11px;
+  border-radius: 999px;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-  .project {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .project-image {
-    width: 100%;
-    height: auto;
-    max-width: 300px;
-  }
-
-  .project-details {
-    width: 100%;
-    text-align: left;
-  }
-
-  .project-title,
-  .project-description {
-    white-space: normal;
-    margin-left: 0;
-  }
-
-  .projects-container {
-    display: flex;
-    flex-direction: column;
-    max-width: 100%;
-    margin-left: 250;
-    margin-top: 0px;
-  }
+.project-cue {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--muted);
+  margin-top: 16px;
+  transition: color 0.15s ease;
 }
-@media (max-width: 480px) {
-  .project {
-    flex-direction: column;
-    align-items: left;
-  }
-  .project-card {
-    width: 100%;
-  }
 
-  .project-image {
-    display: None;
-  }
+.project-link:hover .project-cue {
+  color: var(--accent);
+}
 
-  .project-details {
-    width: 100%;
-    text-align: left;
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .projects-title {
+    font-size: 2.1rem;
   }
-
-  .project-title,
-  .project-description {
-    white-space: normal;
-    margin-left: 0;
+  .project-name {
+    font-size: 1.3rem;
   }
-
-  .projects-container {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin-left: 0;
+  .project-link {
+    padding: 22px 10px;
   }
 }

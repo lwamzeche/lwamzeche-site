@@ -1,21 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.af719ee7.css",
-    "main.js": "/static/js/main.eb9e7051.js",
+    "main.js": "/static/js/main.23dc5a07.js",
     "static/media/PianoRing.png": "/static/media/PianoRing.4db662f22b894fc67176.png",
     "static/media/LwamTMS.png": "/static/media/LwamTMS.c3ee59feb44f9b212263.png",
     "static/media/steam.png": "/static/media/steam.34306b29068c75c46401.png",
-    "static/media/Cancer.png": "/static/media/Cancer.7a95d4dd1343a97d8108.png",
-    "static/media/Lwam7.jpeg": "/static/media/Lwam7.26ff32a09b8f210a9117.jpeg",
+    "static/media/Lwam.jpeg": "/static/media/Lwam.1ebbf9697d274e18ef88.jpeg",
     "static/media/EMS.jpeg": "/static/media/EMS.18837d26899b6ff26aad.jpeg",
-    "static/media/pico.jpeg": "/static/media/pico.1368382f7e692509e6e8.jpeg",
-    "static/media/CoffeeBuddy.png": "/static/media/CoffeeBuddy.db58f7b10b7ff13152eb.png",
+    "static/media/brainwriting.png": "/static/media/brainwriting.d1e4e8b2b7d83b1175eb.png",
     "index.html": "/index.html",
     "main.af719ee7.css.map": "/static/css/main.af719ee7.css.map",
-    "main.eb9e7051.js.map": "/static/js/main.eb9e7051.js.map"
+    "main.23dc5a07.js.map": "/static/js/main.23dc5a07.js.map"
   },
   "entrypoints": [
     "static/css/main.af719ee7.css",
-    "static/js/main.eb9e7051.js"
+    "static/js/main.23dc5a07.js"
   ]
 }

@@ -1,0 +1,217 @@
+/* ProjectDetail.css — single project page (self-contained, doesn't rely on Projects.css) */
+
+.detail-page {
+  max-width: 720px;
+
+  /* Design tokens */
+  --accent: #6e3fa3;
+  --ink: #1a1a1a;
+  --muted: #6b6b6b;
+  --hairline: #e6e6e6;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    sans-serif;
+  --serif: Georgia, "Times New Roman", serif;
+
+  color: var(--ink);
+}
+
+/* ---- Back link ---- */
+.back-link {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  letter-spacing: 0.01em;
+  color: var(--muted);
+  text-decoration: none;
+  margin-bottom: 36px;
+  transition: color 0.15s ease;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+/* ---- Header ---- */
+.detail-header {
+  margin-bottom: 28px;
+}
+
+.detail-eyebrow {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 14px;
+}
+
+.detail-title {
+  font-family: var(--serif);
+  font-size: 2.6rem;
+  font-weight: 700;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.detail-tagline {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  color: #444;
+  margin: 16px 0 0;
+}
+
+.detail-keywords {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 0;
+  margin: 22px 0 0;
+}
+
+.detail-keywords li {
+  font-family: var(--sans);
+  font-size: 0.8rem;
+  color: #4a4a4a;
+  background: #f4f1f8;
+  border: 1px solid #e7e1f0;
+  padding: 5px 12px;
+  border-radius: 999px;
+}
+
+/* ---- Divider ---- */
+.detail-divider {
+  border: none;
+  border-top: 1px solid var(--hairline);
+  margin: 32px 0;
+}
+
+/* ---- Hero image ---- */
+.detail-hero {
+  margin-top: 0;
+}
+
+.detail-hero img {
+  width: 100%;
+  display: block;
+  border-radius: 12px;
+  border: 1px solid var(--hairline);
+}
+
+/* ---- Sections ---- */
+.detail-section {
+  margin-bottom: 40px;
+}
+
+.detail-label {
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 14px;
+}
+
+.detail-body p {
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  line-height: 1.75;
+  color: #222;
+  margin: 0 0 18px;
+}
+
+.detail-body p:last-child {
+  margin-bottom: 0;
+}
+
+/* ---- Highlights (custom accent bullets) ---- */
+.detail-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.detail-highlights li {
+  position: relative;
+  font-family: var(--serif);
+  font-size: 1.12rem;
+  line-height: 1.7;
+  color: #222;
+  padding-left: 26px;
+  margin-bottom: 12px;
+}
+
+.detail-highlights li:last-child {
+  margin-bottom: 0;
+}
+
+.detail-highlights li::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* ---- Link buttons ---- */
+.detail-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0 0 44px;
+}
+
+.detail-link-btn {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--ink);
+  text-decoration: none;
+  padding: 11px 20px;
+  border: 1.5px solid var(--ink);
+  border-radius: 8px;
+  transition: background 0.18s ease, border-color 0.18s ease, color 0.18s ease;
+}
+
+.detail-link-btn:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+/* ---- Screenshots ---- */
+.detail-screenshots {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.detail-screenshots img {
+  width: 100%;
+  border-radius: 10px;
+  border: 1px solid var(--hairline);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.detail-missing {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+  .detail-title {
+    font-size: 2rem;
+  }
+  .detail-tagline {
+    font-size: 1.1rem;
+  }
+}

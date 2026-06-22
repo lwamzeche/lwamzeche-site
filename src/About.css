@@ -1,68 +1,23 @@
-/* Import Sacramento font */
+/* About.css — home page (bio + teaching) */
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 
-/* Root Container */
-.about-page {
-  display: flex;
-}
-
-/* Sidebar Styling */
-.sidebar {
-  width: 250px;
-  position: fixed;
-  top: 40;
-  left: 0;
-  height: 100%;
-  padding: 20px 20px;
-  //background-color: #f5f5f5; /* Light background color */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  //box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-}
-
-.logo {
-  font-size: 36px;
-  margin-bottom: 20px;
-  text-align: center;
-  font-family: "Sacramento", cursive; /* Apply Sacramento font */
-}
-
-.profile-image {
-  width: 150px;
-  height: 180px;
-  border-radius: 50%; /* Makes the image circular */
-  object-fit: cover;
-  margin-bottom: 30px;
-}
-
-.navigation {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-/* .navigation a {
-  color: black;
-  text-decoration: none;
-  margin-bottom: 15px;
-  font-weight: bold;
-  font-size: 16px;
-} */
-
-.navigation a:hover {
-  text-decoration: underline;
-}
-
-/* Main Content Styling */
 .about-content {
-  margin-left: 270px;
-  padding: 40px 30px; /* Top and horizontal padding */
-  max-width: 800px;
+  max-width: 760px;
+
+  --accent: #6e3fa3;
+  --ink: #1a1a1a;
+  --muted: #6b6b6b;
+  --hairline: #e6e6e6;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    sans-serif;
+  --serif: Georgia, "Times New Roman", serif;
+
+  color: var(--ink);
+  font-family: var(--serif);
 }
 
 .about-title {
-  font-size: 2rem;
+  font-size: 2.6rem;
   margin-bottom: 20px;
   font-family: "Sacramento", cursive;
 }
@@ -73,81 +28,135 @@
 }
 
 .about-text p {
-  margin-bottom: 26px;
+  margin-bottom: 24px;
 }
 
 .about-text a {
-  color: black; /* Link color */
+  color: var(--ink);
   font-weight: bold;
   text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .about-text a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+/* CV link — accent treatment ties it to the link styling elsewhere */
+.cv-link {
+  display: inline-block;
+  font-family: var(--sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  margin-top: 4px;
+}
+
+.cv-link::after {
+  content: " ↗";
+}
+
+.cv-link:hover {
   text-decoration: underline;
 }
 
-.projects-title {
-  font-size: 30px;
-  font-weight: bold;
-  margin-bottom: 5px;
-  text-align: left;
-  color: black;
-  margin-left: 270px;
-  padding: 30px 30px;
-  /* font-family: "Sacramento", cursive;  */
+/* ---- Section heading (script font, matches "My Projects") ---- */
+.section-title {
+  font-size: 2.4rem;
+  font-family: "Sacramento", cursive;
+  margin: 52px 0 8px;
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .sidebar {
-    width: 200px;
-    padding: 20px;
-  }
+/* ---- Teaching ---- */
+.teaching-list {
+  display: flex;
+  flex-direction: column;
+}
 
-  .about-content {
-    /* margin-left: 220px; */
-    padding: 20px;
-  }
+.teaching-entry {
+  padding: 22px 0;
+  border-top: 1px solid var(--hairline);
+}
 
-  .profile-image {
-    width: 100px;
-    height: 90px;
-  }
+.teaching-entry:last-child {
+  border-bottom: 1px solid var(--hairline);
+}
 
-  .logo {
-    font-size: 28px;
-  }
+.teaching-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 2px 16px;
+}
+
+.teaching-role {
+  font-family: var(--serif);
+  font-size: 1.18rem;
+  font-weight: 700;
+}
+
+.teaching-dates {
+  font-family: var(--sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.teaching-org {
+  font-family: var(--sans);
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 4px;
+}
+
+.teaching-desc {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 10px 0 0;
+}
+
+/* Bullets with accent dot markers (matches the Highlights on detail pages) */
+.teaching-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
+}
+
+.teaching-bullets li {
+  position: relative;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  padding-left: 22px;
+  margin-bottom: 6px;
+}
+
+.teaching-bullets li:last-child {
+  margin-bottom: 0;
+}
+
+.teaching-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 0.6em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
 }
 
 @media (max-width: 480px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-    flex-direction: row;
-    justify-content: space-around;
-    //padding: 10px;
+  .about-title {
+    font-size: 2.1rem;
   }
-
-  .about-content {
-    margin-left: 0;
-    margin-top: 20px;
-  }
-
-  .navigation {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  .navigation a {
-    margin: 5px 10px;
-  }
-
-  .profile-image {
-    display: none; /* Hide profile image on very small screens */
-  }
-  .projects-title {
-    margin-left: 0;
+  .section-title {
+    font-size: 2.1rem;
   }
 }
