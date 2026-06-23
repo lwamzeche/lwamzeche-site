@@ -8,22 +8,23 @@
   --ink: #1a1a1a;
   --muted: #6b6b6b;
   --hairline: #e6e6e6;
-  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    sans-serif;
-  --serif: Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, sans-serif;
+  --serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, sans-serif;
 
   color: var(--ink);
 }
 
 .projects-title {
-  font-family: "Sacramento", cursive;
-  font-size: 2.6rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
   margin: 0 0 4px;
 }
 
 .projects-intro {
-  font-family: var(--serif);
-  font-size: 1.05rem;
+  font-size: 0.95rem;
   color: var(--muted);
   margin: 0 0 8px;
 }
@@ -68,11 +69,10 @@
 }
 
 .project-name {
-  font-family: var(--serif);
-  font-size: 1.55rem;
+  font-size: 1.2rem;
   font-weight: 700;
-  line-height: 1.2;
-  margin: 0 0 9px;
+  line-height: 1.25;
+  margin: 0 0 8px;
   transition: color 0.15s ease;
 }
 
@@ -81,12 +81,11 @@
 }
 
 .project-summary {
-  font-family: var(--serif);
-  font-size: 1.08rem;
+  font-size: 0.95rem;
   line-height: 1.6;
-  color: #333;
+  color: #444;
   margin: 0;
-  max-width: 60ch;
+  max-width: 68ch;
 }
 
 .project-tags {
@@ -125,10 +124,10 @@
 /* ---- Responsive ---- */
 @media (max-width: 600px) {
   .projects-title {
-    font-size: 2.1rem;
+    font-size: 1.4rem;
   }
   .project-name {
-    font-size: 1.3rem;
+    font-size: 1.1rem;
   }
   .project-link {
     padding: 22px 10px;

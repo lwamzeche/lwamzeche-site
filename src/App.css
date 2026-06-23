@@ -1,7 +1,11 @@
 /* App.css — global layout (sidebar + main content) */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 .App {
   display: flex;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, sans-serif;
+  color: #1a1a1a;
 }
 
 /* ---- Sidebar (fixed on the left) ---- */
@@ -35,9 +39,9 @@
 .nav-item {
   color: black;
   text-decoration: none;
-  font-weight: bold;
-  font-size: 16px;
-  margin-bottom: 15px;
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 14px;
 }
 
 .nav-item:hover {

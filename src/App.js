@@ -50,14 +50,6 @@ function Sidebar() {
             Email
           </a>
           <a
-            href="https://x.com/lwam_zeche"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="nav"
-          >
-            Twitter
-          </a>
-          <a
             href="https://medium.com/@lwzaraya"
             target="_blank"
             rel="noopener noreferrer"

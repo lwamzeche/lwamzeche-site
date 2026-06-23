@@ -2,38 +2,38 @@
 @import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
 
 .about-content {
-  max-width: 900px;
+  max-width: 820px;
 
   --accent: #6e3fa3;
   --ink: #1a1a1a;
   --muted: #6b6b6b;
   --hairline: #e6e6e6;
-  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
-    sans-serif;
-  --serif: Georgia, "Times New Roman", serif;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
+  --serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, sans-serif;
 
   color: var(--ink);
-  font-family: var(--serif);
+  font-family: var(--sans);
 }
 
+/* Name — kept in the script font as a signature */
 .about-title {
-  font-size: 2.6rem;
-  margin-bottom: 20px;
+  font-size: 2.2rem;
+  margin-bottom: 18px;
   font-family: "Sacramento", cursive;
 }
 
 .about-text {
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .about-text p {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 }
 
 .about-text a {
   color: var(--ink);
-  font-weight: bold;
+  font-weight: 600;
   text-decoration: none;
   border-bottom: 1px solid transparent;
   transition: color 0.15s ease, border-color 0.15s ease;
@@ -44,11 +44,9 @@
   border-bottom-color: var(--accent);
 }
 
-/* CV link — accent treatment ties it to the link styling elsewhere */
 .cv-link {
   display: inline-block;
-  font-family: var(--sans);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-weight: 600;
   color: var(--accent);
   text-decoration: none;
@@ -63,11 +61,12 @@
   text-decoration: underline;
 }
 
-/* ---- Section heading (script font, matches "My Projects") ---- */
+/* ---- Section heading (clean sans, matches "My Projects") ---- */
 .section-title {
-  font-size: 2.4rem;
-  font-family: "Sacramento", cursive;
-  margin: 52px 0 8px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  margin: 44px 0 14px;
 }
 
 /* ---- Teaching ---- */
@@ -77,7 +76,7 @@
 }
 
 .teaching-entry {
-  padding: 22px 0;
+  padding: 20px 0;
   border-top: 1px solid var(--hairline);
 }
 
@@ -94,14 +93,12 @@
 }
 
 .teaching-role {
-  font-family: var(--serif);
-  font-size: 1.18rem;
-  font-weight: 700;
+  font-size: 0.98rem;
+  font-weight: 600;
 }
 
 .teaching-dates {
-  font-family: var(--sans);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -110,31 +107,30 @@
 }
 
 .teaching-org {
-  font-family: var(--sans);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   color: var(--muted);
-  margin-top: 4px;
+  margin-top: 3px;
 }
 
 .teaching-desc {
-  font-size: 1.1rem;
+  font-size: 0.92rem;
   line-height: 1.6;
-  margin: 10px 0 0;
+  margin: 8px 0 0;
 }
 
-/* Bullets with accent dot markers (matches the Highlights on detail pages) */
+/* Bullets with accent dot markers */
 .teaching-bullets {
   list-style: none;
   padding: 0;
-  margin: 10px 0 0;
+  margin: 8px 0 0;
 }
 
 .teaching-bullets li {
   position: relative;
-  font-size: 1.1rem;
+  font-size: 0.92rem;
   line-height: 1.6;
-  padding-left: 22px;
-  margin-bottom: 6px;
+  padding-left: 20px;
+  margin-bottom: 5px;
 }
 
 .teaching-bullets li:last-child {
@@ -145,18 +141,18 @@
   content: "";
   position: absolute;
   left: 2px;
-  top: 0.6em;
-  width: 6px;
-  height: 6px;
+  top: 0.62em;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
   background: var(--accent);
 }
 
 @media (max-width: 480px) {
   .about-title {
-    font-size: 2.1rem;
+    font-size: 1.9rem;
   }
   .section-title {
-    font-size: 2.1rem;
+    font-size: 1.3rem;
   }
 }

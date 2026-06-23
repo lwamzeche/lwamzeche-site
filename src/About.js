@@ -23,13 +23,13 @@ const teaching = [
   {
     role: "Teaching Assistant — AddisCoder",
     org: "Addis Ababa, Ethiopia",
-    dates: "Jul 2025 – Aug 2025",
+    dates: "Summer 2025",
     desc: "Taught data structures and algorithms in Python to high-school students in Ethiopia.",
   },
   {
     role: "Teaching Assistant — Introduction to Algorithms (CS300)",
     org: "KAIST School of Computing · Prof. Martin Ziegler",
-    dates: "Sep 2022 – Dec 2022",
+    dates: "Fall 2022",
     bullets: [
       "Developed and graded assignments and exams throughout the semester.",
       "Held office hours, giving detailed explanations that strengthened students' grasp of algorithmic concepts.",
@@ -38,7 +38,7 @@ const teaching = [
   {
     role: "Teaching Assistant — Academic English Camp for Freshmen",
     org: "KAIST School of Digital Humanities & Computational Social Sciences",
-    dates: "Jan 2022",
+    dates: "Winter 2022",
     bullets: [
       "Prepared engaging English activities and co-led class sessions.",
       "Graded exams, took attendance, and assisted with curriculum planning.",
