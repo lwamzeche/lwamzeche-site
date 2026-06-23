@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.af719ee7.css",
-    "main.js": "/static/js/main.23dc5a07.js",
+    "main.css": "/static/css/main.4c09a646.css",
+    "main.js": "/static/js/main.a5d959a2.js",
     "static/media/PianoRing.png": "/static/media/PianoRing.4db662f22b894fc67176.png",
     "static/media/LwamTMS.png": "/static/media/LwamTMS.c3ee59feb44f9b212263.png",
     "static/media/steam.png": "/static/media/steam.34306b29068c75c46401.png",
-    "static/media/Lwam.jpeg": "/static/media/Lwam.1ebbf9697d274e18ef88.jpeg",
     "static/media/EMS.jpeg": "/static/media/EMS.18837d26899b6ff26aad.jpeg",
+    "static/media/Lwam1.jpeg": "/static/media/Lwam1.61b95491738b1e03f199.jpeg",
     "static/media/brainwriting.png": "/static/media/brainwriting.d1e4e8b2b7d83b1175eb.png",
     "index.html": "/index.html",
-    "main.af719ee7.css.map": "/static/css/main.af719ee7.css.map",
-    "main.23dc5a07.js.map": "/static/js/main.23dc5a07.js.map"
+    "main.4c09a646.css.map": "/static/css/main.4c09a646.css.map",
+    "main.a5d959a2.js.map": "/static/js/main.a5d959a2.js.map"
   },
   "entrypoints": [
-    "static/css/main.af719ee7.css",
-    "static/js/main.23dc5a07.js"
+    "static/css/main.4c09a646.css",
+    "static/js/main.a5d959a2.js"
   ]
 }

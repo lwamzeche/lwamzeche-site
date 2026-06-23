@@ -1,22 +1,3 @@
-// projectsData.js
-// Single source of truth for every project.
-// Edit content here only — the list page and the per-project pages read from this.
-//
-// Fields per project:
-//   slug            URL id, e.g. /projects/<slug>
-//   title           project name
-//   year            shown in the eyebrow on the detail page
-//   category        short "Field · Field" label (eyebrow)
-//   image           card cover image (null -> clean placeholder)
-//   description     one-line summary used on the Projects list
-//   tagline         one-line hook shown under the title on the detail page
-//   longDescription array of paragraphs (the Overview)
-//   highlights      array of bullet points (optional)
-//   keywords        tag pills
-//   links           [{ label, url }]
-//   screenshots     array of imported images (optional)
-
-// ---- Existing project images ----
 import steamDexImage from "./images/steam.png";
 import Roomie from "./images/LOGO.png";
 import PianoRing from "./images/PianoRing.png";
@@ -24,12 +5,7 @@ import EMS from "./images/EMS.jpeg";
 import Brainwriting from "./images/brainwriting.png";
 import LwamTMS from "./images/LwamTMS.png";
 
-// ---- New 2026 cover images: drop into src/images, import, then set `image:` ----
-// import AHCD from "./images/ahcd.png";
-// import FPGA from "./images/fpga.png";
-
 const projects = [
-  // ===================== 2026 (this year) =====================
   {
     slug: "algorithm-hardware-co-design",
     title: "Algorithm–Hardware Co-Design for LLM Inference",
@@ -43,12 +19,11 @@ const projects = [
     longDescription: [
       "This project studies how algorithm-level and hardware-level choices interact when running large language model inference on commodity GPUs, where memory bandwidth and energy — not just raw compute — decide what is actually deployable.",
       "We benchmark low-precision quantization — FP16, INT8, and INT4 (BitsAndBytes and AWQ) — alongside structured sparsity on Llama 3.1 8B, then measure how each choice trades off accuracy against latency, throughput, and energy.",
-      "The same configurations are evaluated across T4, L4, and A100 GPUs so the results capture how a given algorithmic choice behaves on very different hardware. The findings are written up as an IEEE-format conference paper focused on energy-efficient inference.",
+      "The same configurations are evaluated across T4, L4, and A100 GPUs so the results capture how a given algorithmic choice behaves on very different hardware.",
     ],
     highlights: [
       "Benchmarked FP16, INT8, and INT4 (BitsAndBytes, AWQ) plus structured sparsity on Llama 3.1 8B.",
       "Measured accuracy, latency, throughput, and energy across T4, L4, and A100 GPUs.",
-      "Written up as an IEEE-format conference paper on energy-efficient LLM inference.",
       "Course project for EEC 289Q — Deep Learning Hardware.",
     ],
     keywords: [
@@ -148,7 +123,6 @@ const projects = [
     screenshots: [],
   },
 
-  // ===================== Earlier work =====================
   {
     slug: "piano-ring",
     title: "PianoRing",

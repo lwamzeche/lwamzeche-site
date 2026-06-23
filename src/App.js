@@ -42,35 +42,40 @@ function Sidebar() {
         >
           Note
         </Link>
-
-        <a href="mailto:lwamzeche93@gmail.com" className="nav">
-          Email
-        </a>
-        <a
-          href="https://x.com/lwam_zeche"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="nav"
-        >
-          Twitter
-        </a>
-        <a
-          href="https://medium.com/@lwzaraya"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="nav"
-        >
-          Medium
-        </a>
-        <a
-          href="https://substack.com/@lwamz?"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="nav"
-        >
-          Substack
-        </a>
       </nav>
+
+      <div className="sidebar-footer">
+        <div className="social-links">
+          <a href="mailto:lwamzeche93@gmail.com" className="nav">
+            Email
+          </a>
+          <a
+            href="https://x.com/lwam_zeche"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav"
+          >
+            Twitter
+          </a>
+          <a
+            href="https://medium.com/@lwzaraya"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav"
+          >
+            Medium
+          </a>
+          <a
+            href="https://substack.com/@lwamz?"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="nav"
+          >
+            Substack
+          </a>
+        </div>
+        <p className="last-updated">Last updated June 2026</p>
+      </div>
     </div>
   );
 }

@@ -1,7 +1,7 @@
 /* ProjectDetail.css — single project page (self-contained, doesn't rely on Projects.css) */
 
 .detail-page {
-  max-width: 720px;
+  max-width: 880px;
 
   /* Design tokens */
   --accent: #6e3fa3;
