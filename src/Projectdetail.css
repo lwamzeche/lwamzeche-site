@@ -126,6 +126,100 @@
   margin-bottom: 0;
 }
 
+/* ---- Rich section blocks ---- */
+.block-p {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: #333;
+  margin: 0 0 16px;
+}
+
+.block-quote {
+  margin: 0 0 18px;
+  padding: 12px 18px;
+  border-left: 3px solid var(--accent);
+  background: #faf8fc;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #2a2a2a;
+}
+
+.block-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 18px;
+}
+
+.block-list li {
+  position: relative;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #333;
+  padding-left: 22px;
+  margin-bottom: 8px;
+}
+
+.block-list li::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 0.62em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.block-code {
+  margin: 0 0 18px;
+  padding: 14px 16px;
+  background: #1e1e24;
+  color: #eaeaf0;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+  font-size: 0.82rem;
+  line-height: 1.55;
+}
+
+.block-code code {
+  font-family: inherit;
+}
+
+/* Tables scroll horizontally on narrow screens instead of overflowing */
+.block-table-wrap {
+  margin: 0 0 18px;
+  overflow-x: auto;
+}
+
+.block-table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 0.85rem;
+}
+
+.block-table th,
+.block-table td {
+  text-align: left;
+  padding: 7px 12px;
+  border-bottom: 1px solid var(--hairline);
+  white-space: nowrap;
+}
+
+.block-table th {
+  font-weight: 600;
+  color: #111;
+  border-bottom: 1.5px solid #d8d2e2;
+}
+
+.block-table td {
+  color: #333;
+}
+
+.block-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
 /* ---- Highlights (custom accent bullets) ---- */
 .detail-highlights {
   list-style: none;

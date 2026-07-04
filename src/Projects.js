@@ -8,9 +8,7 @@ function Projects() {
   return (
     <div className="projects-page">
       <h1 className="projects-title">My Projects</h1>
-      <p className="projects-intro">
-        Research and engineering projects, most recent first.
-      </p>
+      <p className="projects-intro">Research and engineering projects.</p>
 
       <ul className="project-list">
         {projects.map((project) => {

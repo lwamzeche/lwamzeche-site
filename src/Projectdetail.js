@@ -4,6 +4,60 @@ import { useParams, Link } from "react-router-dom";
 import projects from "./Projectsdata";
 import "./Projectdetail.css";
 
+// Renders a single content block inside a rich section.
+function Block({ block }) {
+  switch (block.type) {
+    case "p":
+      return <p className="block-p">{block.text}</p>;
+
+    case "quote":
+      return <blockquote className="block-quote">{block.text}</blockquote>;
+
+    case "list":
+      return (
+        <ul className="block-list">
+          {block.items.map((item, i) => (
+            <li key={i}>{item}</li>
+          ))}
+        </ul>
+      );
+
+    case "code":
+      return (
+        <pre className="block-code">
+          <code>{block.text}</code>
+        </pre>
+      );
+
+    case "table":
+      return (
+        <div className="block-table-wrap">
+          <table className="block-table">
+            <thead>
+              <tr>
+                {block.headers.map((h, i) => (
+                  <th key={i}>{h}</th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {block.rows.map((row, r) => (
+                <tr key={r}>
+                  {row.map((cell, c) => (
+                    <td key={c}>{cell}</td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      );
+
+    default:
+      return null;
+  }
+}
+
 function ProjectDetail() {
   const { slug } = useParams();
   const project = projects.find((p) => p.slug === slug);
@@ -22,6 +76,7 @@ function ProjectDetail() {
   const eyebrow = [project.year, project.category]
     .filter(Boolean)
     .join("  ·  ");
+  const hasSections = project.sections?.length > 0;
 
   return (
     <div className="detail-page">
@@ -53,18 +108,33 @@ function ProjectDetail() {
 
       <hr className="detail-divider" />
 
-      {/* ---- Overview ---- */}
-      <section className="detail-section">
-        <h2 className="detail-label">Overview</h2>
-        <div className="detail-body">
-          {project.longDescription.map((para, i) => (
-            <p key={i}>{para}</p>
-          ))}
-        </div>
-      </section>
+      {/* ---- Rich sections (README-style: headings, tables, code) ---- */}
+      {hasSections &&
+        project.sections.map((section, i) => (
+          <section className="detail-section" key={i}>
+            {section.heading && (
+              <h2 className="detail-label">{section.heading}</h2>
+            )}
+            {section.blocks.map((block, j) => (
+              <Block block={block} key={j} />
+            ))}
+          </section>
+        ))}
 
-      {/* ---- Highlights ---- */}
-      {project.highlights?.length > 0 && (
+      {/* ---- Simple Overview (only when there are no rich sections) ---- */}
+      {!hasSections && project.longDescription?.length > 0 && (
+        <section className="detail-section">
+          <h2 className="detail-label">Overview</h2>
+          <div className="detail-body">
+            {project.longDescription.map((para, i) => (
+              <p key={i}>{para}</p>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* ---- Highlights (only when there are no rich sections) ---- */}
+      {!hasSections && project.highlights?.length > 0 && (
         <section className="detail-section">
           <h2 className="detail-label">Highlights</h2>
           <ul className="detail-highlights">
